@@ -1,0 +1,3 @@
+function getArticleText() {
+    const artic
+}

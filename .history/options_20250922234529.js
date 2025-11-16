@@ -1,0 +1,3 @@
+function getArticleText() {
+    const article=document.querySelector()
+}

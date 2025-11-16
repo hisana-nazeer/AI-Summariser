@@ -1,0 +1,111 @@
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #0f1115;
+  color: #e8f0f8;
+  width: 320px;          /* good default width for Chrome popup */
+  min-height: 240px;
+}
+h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  text-align: center;
+  background: linear-gradient(135deg,#6ee7b7,#7cc0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === Layout Blocks === */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#summary-type {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+/* === Buttons === */
+button {
+  cursor: pointer;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0b1a23;
+  background: linear-gradient(135deg,#7cc0ff,#6ee7b7);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  transition: transform .1s ease, box-shadow .1s ease;
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+button:active {
+  transform: translateY(1px);
+}
+
+/* === Result Box === */
+#result {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 90px;
+  white-space: pre-wrap;
+}
+
+/* === Loading Spinner === */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+.loader {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top: 3px solid #7cc0ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* === Options Page tweaks (if reused) === */
+.success-message {
+  display: none;
+  margin-top: 10px;
+  color: #6ee7b7;
+  font-size: 13px;
+}
+input[type=\"text\"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  color: #e8f0f8;
+  font-size: 14px;
+}
